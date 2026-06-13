@@ -6,8 +6,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="message-box">
-        <h1>おめでとう！<br>あなたは参加資格を<br>得ました！</h1>
+    <div class="spam-container">
+        <div class="warning-header">🚨 重大イベント 🚨</div>
+        
+        <div class="message-box">
+            <p class="sub-title">✨ このリンクが届いた方限定 ✨</p>
+            <h1>おめでとうございます！<br>あなたは特別参加資格を<br><span class="highlight">獲得しました！</span></h1>
+        </div>
+
+        <div class="timer-box">
+            チャンスは一度きり！ 残り時間: <span id="timer">05:00</span>
+        </div>
+
+        <button popovertarget="warning" popovertargetaction="show" class="spam-btn">今すぐ権利を受け取る！ 👉</button>
+
+        <div id="warning" popover class="warning">
+            <button class="close" popovertarget="warning" popovertargetaction="hide">×</button>
+        </div>
     </div>
+    <script src="js/timer.js"></script>
 </body>
 </html>
