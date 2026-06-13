@@ -1,5 +1,8 @@
 body {
-    background-color: #f0f2f5;
+    background-color: #e5e7eb;
+    background-image: radial-gradient(#bdc3c7 15%, transparent 16%), radial-gradient(#bdc3c7 15%, transparent 16%);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     overflow: hidden;
@@ -118,9 +121,94 @@ h1 {
 }
 
 [popover]::backdrop {
-    background-image: url("../image/うのみにしてはだめ！だめ！.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgb(44, 37, 34);
 }
+
+#warning::backdrop {
+    background-image: url("../image/うのみにしてはだめ！だめ！.png");
+}
+
+#warning-Malfoy::backdrop {
+    background-image: url("../image/釣られたなポッター.jpg");
+}
+
+.fake-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 320px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 15px;
+    z-index: 1000;
+    font-family: sans-serif;
+    border: 1px solid #ddd;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(120%); }
+    to { transform: translateX(0); }
+}
+
+.notif-header { display: flex; align-items: center; font-size: 14px; margin-bottom: 10px; color: #333; }
+.notif-icon { font-size: 24px; margin-right: 12px; }
+.notif-content { display: flex; flex-direction: column; text-align: left; }
+.notif-domain { font-size: 10px; color: #888; margin-bottom: 2px; }
+.notif-text { font-size: 12px; font-weight: bold; color: #222; line-height: 1.3; }
+.notif-buttons { display: flex; justify-content: flex-end; gap: 10px; }
+.notif-btn { padding: 5px 15px; border-radius: 4px; border: 1px solid #ccc; cursor: pointer; font-size: 12px; }
+.notif-btn.allow { background: #1a73e8; color: white; border: none; }
+
+.shady-ad {
+    position: fixed;
+    bottom: 20px;
+    width: 200px;
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    z-index: 50;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.ad-left { left: 20px; border: none; }
+.ad-right { right: 20px; border: none; }
+.shady-ad:hover {
+    transform: scale(1.05);
+}
+.ad-video-mock {
+    width: 100%;
+    height: 120px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.ad-video-mock iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none;
+}
+.ad-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.ad-text {
+    font-size: 11px;
+    text-align: center;
+    padding: 5px;
+    color: #0f0;
+    font-weight: bold;
+}
+.close-ad { position: absolute; top: 0; right: 0; background: #fff; color: #000; font-size: 10px; padding: 0 4px; }
