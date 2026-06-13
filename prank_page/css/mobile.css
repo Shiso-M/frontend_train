@@ -1,0 +1,83 @@
+/* スマホ専用: 縦長画面を埋め尽くすためのスタイル */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: 20px 20px;
+    overflow-y: auto;
+}
+
+.spam-container {
+    width: 95%;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 20px 0;
+}
+
+.warning-header {
+    font-size: 1.2rem;
+    padding: 15px;
+}
+
+.sub-title {
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+
+h1 {
+    font-size: 1.3rem;
+    line-height: 1.2;
+}
+
+.highlight {
+    font-size: 1.7rem;
+    color: #ff0000;
+    text-shadow: 2px 2px 0px rgba(255,255,0,1);
+    display: inline-block;
+}
+
+.timer-box {
+    margin: 20px 10px;
+    padding: 15px 10px;
+    font-size: 1.2rem;
+}
+
+.spam-btn {
+    width: 95%;
+    font-size: 1.4rem;
+    padding: 18px 10px;
+    margin-bottom: 20px;
+}
+
+.fake-notification {
+    width: calc(100% - 20px);
+    left: 5px;
+    top: 5px;
+    padding: 5px;
+    border-radius: 0 0 15px 15px;
+    animation: slideInMobile 0.5s ease-out;
+    z-index: 1001; 
+}
+
+.notif-text { font-size: 12px !important; }
+.notif-domain { font-size: 9px !important; }
+.notif-icon { font-size: 22px; }
+
+@keyframes slideInMobile {
+    from { transform: translateY(-120%); } 
+    to { transform: translateY(0); }
+}
+
+.shady-ad {
+    width: 45%; 
+    bottom: 0;
+    height: auto;
+    z-index: 1000;
+}
+.ad-left { left: 0; }
+.ad-right { right: 0; }
+
+.ad-video-mock { height: 90px; }
+.ad-text { font-size: 10px; padding: 5px; }
