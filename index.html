@@ -11,19 +11,58 @@
         
         <div class="message-box">
             <p class="sub-title">✨ このリンクが届いた方限定 ✨</p>
-            <h1>依頼主から<br>タコスパーティへの<br>お誘いがきています！</h1>
+            <h1>依頼主から<br>タコスパーティへの<br>お诱いがきています！</h1>
         </div>
 
         <div class="timer-box">
-            チャンスは一度きり！ 残り時間: <span id="timer">05:00</span>
+            チャンスは一度きり！ 残り时间: <span id="timer">05:00</span>
         </div>
 
         <button popovertarget="warning" popovertargetaction="show" class="spam-btn">今すぐ権利を受け取る！ 👉</button>
+    </div>
 
-        <div id="warning" popover class="warning">
-            <button class="close" popovertarget="warning" popovertargetaction="hide">×</button>
+    <!-- ポップオーバー要素の整理 -->
+    <div id="warning" popover class="warning">
+        <button class="close" popovertarget="warning" popovertargetaction="hide">×</button>
+    </div>
+
+    <div id="warning-Malfoy" popover class="warning">
+        <button class="close" popovertarget="warning-Malfoy" popovertargetaction="hide">×</button>
+    </div>
+
+    <!-- 通知プロンプト -->
+    <div class="fake-notification" id="notif-box">
+        <div class="notif-header">
+            <span class="notif-icon">📩</span>
+            <div class="notif-content">
+                <div class="notif-domain">tacos-shiawase-match.jp</div>
+                <div class="notif-text">タコス好き(25)さんから新着メッセージ！<br>「許可」をクリックして内容を確認してください🌮</div>
+            </div>
+        </div>
+        <div class="notif-buttons">
+            <button class="notif-btn" onclick="const box=document.getElementById('notif-box'); box.style.display='none'; setTimeout(()=>box.style.display='block', 1000)">ブロック</button>
+            <button class="notif-btn allow" popovertarget="warning-Malfoy" onclick="const box=document.getElementById('notif-box'); box.style.display='none'; setTimeout(()=>box.style.display='block', 1000)">許可</button>
         </div>
     </div>
+
+    <div class="shady-ad ad-left">
+        <span class="close-ad" onclick="event.stopPropagation(); this.parentElement.remove()">×</span>
+        <div class="ad-video-mock">
+            <iframe src="https://www.youtube.com/embed/PlEe4Otiz7A?autoplay=1&mute=1&loop=1&playlist=PlEe4Otiz7A&controls=0" allow="autoplay; encrypted-media"></iframe>
+            <div class="ad-overlay" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'"></div>
+        </div>
+        <div class="ad-text">【LIVE】近所のタコス好きが<br>あなたを待っています...</div>
+    </div>
+
+    <div class="shady-ad ad-right">
+        <span class="close-ad" onclick="event.stopPropagation(); this.parentElement.remove()">×</span>
+        <div class="ad-video-mock">
+            <iframe src="https://www.youtube.com/embed/pI8p0DQt5zk?autoplay=1&mute=1&loop=1&playlist=pI8p0DQt5zk&controls=0" allow="autoplay; encrypted-media"></iframe>
+            <div class="ad-overlay" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'"></div>
+        </div>
+        <div class="ad-text">【LIVE】近所のタコス好きが<br>あなたを待っています...</div>
+    </div>
+
     <script src="prank_page/js/timer.js"></script>
 </body>
 </html>
