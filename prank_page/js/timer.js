@@ -13,7 +13,7 @@ window.onload = function(){
 
         if(distance < 0){
             clearInterval(interval);
-            countDown.textContent = '残念！ 剥奪です……';
+            countDown.innerHTML = '<br>残念！ 剥奪です……';
         }
     }
 
